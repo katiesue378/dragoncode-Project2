@@ -1,0 +1,21 @@
+<!-- Loop over each object in the projects array -->
+{{#each bucketlists as |bucketlist| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_image}}}
+      <a href="/bucketlist/{{bucketlist.id}}">{{bucketlist.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label=""></span>
+    </p>
+    <p>Created by {{bucketlist.user.name}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{bucketlist.description}}
+    </p>
+  </div>
+</div>
+{{/each}}

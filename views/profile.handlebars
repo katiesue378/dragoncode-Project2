@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Bucketlist:</h3>
+
+    <form class="form new-bucketlist-form">
+      <div class="form-group">
+        <label for="bucketlist-name">buckletlist name:</label>
+        <input class="form-input" type="text" id="bucketlist-name" name="bucketlist-name" />
+      </div>
+      {{!-- <div class="form-group">
+        <label for="bucketlist-funding">needed funding ($):</label>
+        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      </div> --}}
+      <div class="form-group">
+        <label for="bucketlist-desc">description:</label>
+        <textarea class="form-input" id="bucketlist-desc" name="bucketlist-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if bucketlist.length}}
+  <div class="col-md-6 bucketlist-list">
+    <h3>Current Bucketlists:</h3>
+
+    {{#each bucketlists as |bucketlist|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/bucketlist/{{bucketlist.id}}">{{bucketlist.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{bucketlist.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
