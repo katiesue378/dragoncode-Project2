@@ -25,14 +25,16 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <nav class="navbar navbar-expand-sm bg-light navbar-dark fixed-top">
         <!-- Conditionally render login or logout links -->
 
         {{#if logged_in}}
         <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="no-button" id="logout">LOGOUT</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">LOGIN OR SIGNUP</a>
+
+      
         {{/if}}
       </nav>
       <h1>

@@ -2,13 +2,12 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const name = document.querySelector('#bucketlist-name').value.trim();
-    // const needed_funding = document.querySelector('#project-funding').value.trim();
-    const description = document.querySelector('#bucketlist-desc').value.trim();
-  
-    if (name && description) {
+    const state = document.querySelector('#bucketlist-desc').value.trim();
+  console.log(name, state)
+    if (name && state) {
       const response = await fetch(`/api/bucketlists`, {
         method: 'POST',
-        body: JSON.stringify({ name, description }),
+        body: JSON.stringify({ name, state }),
         headers: {
           'Content-Type': 'application/json',
         },

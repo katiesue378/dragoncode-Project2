@@ -28,6 +28,11 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/bucketlist', async (req, res) => {
+  // Send the rendered Handlebars.js template back as the response
+  res.render('bucketlist');
+});
+
 router.get('/bucketlist/:id', async (req, res) => {
   try {
     const bucketlistData = await Bucketlist.findByPk(req.params.id, {
