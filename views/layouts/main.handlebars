@@ -6,17 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>United States Destinations</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+ 
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+ 
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="U.S. Flag, Statue of Liberty, and Golden Gate Bridge">🇺🇸🗽🌉</span>
-        <a href="/">Become a User and Create Your Very Own Bucketlist!</a>
-      </h1>
-      <nav>
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <!-- Conditionally render login or logout links -->
+
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
@@ -24,7 +35,15 @@
         <a href="/login">login</a>
         {{/if}}
       </nav>
+      <h1>
+        <p>Create Your Own U.S. Travel Bucketlist!</p>
+        <img style= justify-content: center; src= "https://suncatcherstudio.com/uploads/patterns/us-maps/png-medium/usa-map-states-capitals-color.png" alt="map of the US">
+
+      </h1>
+
+      
     </header>
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
