@@ -1,0 +1,18 @@
+[
+    {
+        "state": "New York",
+        "city": "New York",
+        "description": "Going to see a Broadway show in NYC!"
+    
+    },
+    {
+        "state": "Florida",
+        "city": "Miami",
+        "description": "Going to eat a Cuban sandwich in South Beach!"
+    },
+    {
+        "state": "California",
+        "city": "Anaheim",
+        "description": "Going to Disneyland!"
+    }
+  ]

@@ -22,10 +22,10 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: gray">
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <nav class="navbar navbar-expand-sm bg-light navbar-dark fixed-top">
+      <nav class="navbar navbar-expand-sm bg-light navbar-dark">
         <!-- Conditionally render login or logout links -->
 
         {{#if logged_in}}
@@ -36,16 +36,13 @@
 
       
         {{/if}}
-      </nav>
-      <h1>
+      </nav> 
+    </header>
+    <h1>
+        
         <p>Create Your Own U.S. Travel Bucketlist!</p>
         <img style= justify-content: center; src= "https://suncatcherstudio.com/uploads/patterns/us-maps/png-medium/usa-map-states-capitals-color.png" alt="map of the US">
-
-      </h1>
-
-      
-    </header>
-
+    </h1>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
